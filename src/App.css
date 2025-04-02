@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  /* overflow-x: hidden; */
+  width: 100%;
+  scroll-behavior: smooth;
+}
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Añadir espacio para que el contenido no quede debajo del navbar */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+
+section {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 2rem 1rem;
+}
+/* Estilos de botones globales */
+.btn {
+  padding: 0.8rem 1.8rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn-primary {
+  background-color: #7096D1;
+  color: #F9FCFF;
+}
+
+.btn-primary:hover {
+  background-color: #F9FCFF;
+  color: #7096D1;
+  border: 2px solid #7096D1;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #7096D1;
+  border: 2px solid #7096D1;
+}
+
+.btn-secondary:hover {
+  background-color: #7096D1;
+  color: #F9FCFF;
+  transform: translateY(-2px);
+}
+
+/* Agregar transiciones suaves para enlaces */
+a {
+  transition: color 0.3s ease;
+}

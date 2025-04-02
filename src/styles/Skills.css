@@ -1,0 +1,160 @@
+.skills {
+    padding: 5rem 2rem;
+    background-color: #F9FCFF;
+  }
+
+  .skills-carousel {
+    max-width: min(90vw, 1600px);
+    display: flex;
+    margin: 0 auto;
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+    overflow-y: hidden; /* Desactiva el scroll vertical */
+    overflow-x: auto; /* Habilita el scroll horizontal */
+    scroll-behavior: smooth;
+    scrollbar-color: transparent transparent;
+    user-select: none;
+    background-color: transparent;
+  }
+  
+  .skills-carousel::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+  }
+
+/* Asegurar que el contenedor tenga un ancho fijo para los items */
+.skill-category {
+  background-color: #F9FCFF;
+  min-width: 280px; /* Asegurar que los elementos tengan ancho fijo */
+  flex: 0 0 auto; /* Evitar que se estiren */
+  scroll-snap-align: start;
+  perspective: 1000px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  margin: 1rem;
+  min-height: 450px;
+}
+
+/* Flip card efecto */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  background-color: #F9FCFF;
+}
+
+.flip-card-front {
+  transform: rotateY(180deg); /* Girar 180 grados para que esté detrás */
+}
+
+.flip-card-back {
+  background-color: #F9FCFF;
+  color: #081F5C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(0deg);
+}
+
+.skill-image {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Activar flip al pasar el cursor */
+.skill-category:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+  
+  .skill-category h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #081F5C;
+    position: relative;
+    padding-bottom: 0.5rem;
+  }
+  
+  .skill-category h3:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background-color: #334EAC;
+  }
+  
+  .skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    white-space: normal; /* Importante: resetea el white-space para el contenido */
+  }
+  
+  .skill-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .skill-icon {
+    width: 40px;
+    height: 40px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    background-color: #E7F1FF;
+    color: #F9FCFF;
+    border-radius: 8px;
+    font-size: 1.2rem;
+  }
+  
+  .skill-info {
+    flex: 1;
+  }
+  
+  .skill-info h4 {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .skill-bar {
+    height: 8px;
+    background-color: #E7F1FF;
+    border-radius: 4px;
+    /* overflow: hidden; */
+  }
+  
+  .skill-progress {
+    height: 100%;
+    background-color: #7096D1;
+    border-radius: 4px;
+  }
+  
+  @media (max-width: 768px) {
+    .skills-carousel {
+      gap: 1rem;
+      padding: 0.5rem;
+    }
+    
+    .skill-category {
+      min-width: 250px;
+      width: 80%;
+      max-width: 280px;
+    }
+  }
