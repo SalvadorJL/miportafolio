@@ -31,7 +31,7 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-
+    
     try {
       const response = await fetch('https://apiportafolio-one.vercel.app/api/email', {
         method: 'POST',
@@ -41,7 +41,7 @@ const Contact = () => {
           email: formData.email,
           asunto: formData.subject,
           mensaje: formData.message
-        })        
+        })         
       });
   
       if (!response.ok) {
@@ -99,10 +99,10 @@ const Contact = () => {
           
           <div className="social-links">
             <a href="https://github.com/SalvadorJL" target="_blank" rel="noopener noreferrer">
-              <i className="contact-icon"><FaLinkedin color="#0a66c2" /></i>
+              <i className="contact-icon"><FaGithub color="#0a66c2" /></i>
             </a>
             <a href="https://linkedin.com/in/sjlg/" target="_blank" rel="noopener noreferrer">
-              <i className="contact-icon"><FaGithub color="black" /></i>
+              <i className="contact-icon"><FaLinkedin color="black" /></i>
             </a>
             {/* <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-twitter"></i>
