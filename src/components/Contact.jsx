@@ -33,7 +33,7 @@ const Contact = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch('https://apiportafolio-one.vercel.app//api/email', {
+      const response = await fetch('https://apiportafolio-one.vercel.app/api/email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
