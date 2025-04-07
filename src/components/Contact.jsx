@@ -88,7 +88,13 @@ const Contact = () => {
               <p>salvador.lopez.970519@gmail.com</p>
             </div>
           </div>
-          
+          <div className="info-item">
+            <i className="fas fa-envelope"></i>
+            <div>
+              <h3>Teléfono</h3>
+              <p>+52 961-196-7594</p>
+            </div>
+          </div>
           <div className="info-item">
             <i className="fas fa-map-marker-alt"></i>
             <div>

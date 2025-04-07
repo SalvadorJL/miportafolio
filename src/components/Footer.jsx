@@ -49,7 +49,7 @@ const Footer = () => {
       </div>
       
       <div className="footer-bottom">
-        <p>&copy; {currentYear} Tu Nombre. Todos los derechos reservados.</p>
+        <p>&copy; {currentYear} Salvador J. López. Todos los derechos reservados.</p>
       </div>
     </footer>
   );
