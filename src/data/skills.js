@@ -9,6 +9,15 @@ const skillsImages = {
 };
 
 const skillsData = {
+    "Backend": [
+      { name: "Java", level: 100, icon: "FaJava", color:"#4ea3e4" },
+      { name: "Spring Boot", level: 90, icon: "SiSpring", color:"#a3d468" },
+      { name: "Maven", level: 85, icon: "SiApachemaven", color:"#6fa8dc" },
+      { name: "Python", level: 75, icon: "FaPython", color:"#63b8ff" },
+      { name: "DJango", level: 75, icon: "DiDjango", color:"#a4c330" },
+      { name: "Node.js", level: 75, icon: "FaNodeJs", color:"#3C873A" },
+      // { name: "Express", level: 80, icon: "SiExpress", color:"#61DBFB" },
+    ],
     "Frontend": [
       { name: "Angular", level: 85, icon: "FaAngular", color:"#c3002f" },
       { name: "Laravel", level: 75, icon: "SiLaravel", color:"#bf5329" },
@@ -18,27 +27,18 @@ const skillsData = {
       { name: "PHP", level: 70, icon: "SiPhp", color:"#c92434" },
       // { name: "TailwindCSS", level: 80, icon: "SiTailwindcss", color:"#61DBFB" }
     ],
-    "Backend": [
-      { name: "Java", level: 100, icon: "FaJava", color:"#4ea3e4" },
-      { name: "Spring Boot", level: 90, icon: "SiSpring", color:"#a3d468" },
-      { name: "Maven", level: 85, icon: "SiApachemaven", color:"#6fa8dc" },
-      { name: "Python", level: 75, icon: "FaPython", color:"#63b8ff" },
-      { name: "DJango", level: 75, icon: "DiDjango", color:"#a4c330" },
-      { name: "Node.js", level: 85, icon: "FaNodeJs", color:"#3C873A" },
-      // { name: "Express", level: 80, icon: "SiExpress", color:"#61DBFB" },
-    ],
     "Databases": [
       { name: "MySQL", level: 95, icon: "SiMysql", color:"#00758f" },
       { name: "SQLServer", level: 80, icon: "DiMsqlServer", color:"red" },
-      { name: "PostgreSQL", level: 70, icon: "SiPostgresql", color:"#336791" },
-      { name: "MongoDB", level: 85, icon: "SiMongodb", color:"#47A248" },
-      { name: "Cassandra", level: 70, icon: "SiApachecassandra", color:"black" },
+      { name: "PostgreSQL", level: 80, icon: "SiPostgresql", color:"#336791" },
+      { name: "MongoDB", level: 65, icon: "SiMongodb", color:"#47A248" },
+      { name: "Cassandra", level: 50, icon: "SiApachecassandra", color:"black" },
       // { name: "Oracle", level: 75, icon: "SiOracle", color:"#61DBFB" },
       { name: "Firebase", level: 70, icon: "SiFirebase", color:"#FFCA28" }
     ],
     "DevOps": [
       { name: "Azure", level: 85, icon: "VscAzure", color:"#0080ff" },
-      { name: "AWS", level: 70, icon: "FaAws", color:"black" },
+      { name: "AWS", level: 60, icon: "FaAws", color:"black" },
       { name: "Docker", level: 85, icon: "SiDocker", color:"#0db7ed" },
       { name: "Kubernetes", level: 75, icon: "SiKubernetes", color:"#0db7ed" },
       { name: "WebSphere", level: 75, icon: "", color:"white" },
@@ -46,8 +46,8 @@ const skillsData = {
     ],
     "Automation": [
       { name: "Jenkins", level: 80, icon: "SiJenkins", color:"#bf5329" },
-      { name: "Ansible", level: 75, icon: "SiAnsible", color:"#bf5329" },
-      { name: "Rundeck", level: 75, icon: "SiRundeck", color:"green" },
+      { name: "Ansible", level: 65, icon: "SiAnsible", color:"#bf5329" },
+      { name: "Rundeck", level: 65, icon: "SiRundeck", color:"green" },
     ],
     "Testing": [
       { name: "JUnit", level: 100, icon: "SiJunit5", color:"green" },
@@ -57,7 +57,7 @@ const skillsData = {
     ],
     "Tools & Others": [
       { name: "Git", level: 90, icon: "FaGitAlt", color:"#F05032" },
-      { name: "GitHub", level: 85, icon: "FaGithub", color:"black" },
+      { name: "GitHub", level: 90, icon: "FaGithub", color:"black" },
       // { name: "BitBucket", level: 85, icon: "FaBitbucket" },
       // { name: "ServiceNow", level: 70, icon: "" },
       { name: "VS Code", level: 70, icon: "VscVscode", color:"#0080ff" },

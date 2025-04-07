@@ -18,6 +18,8 @@ const Contact = () => {
     message: ''
   });
 
+  const [isLoading, setIsLoading] = useState(false);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prevData => ({
@@ -26,25 +28,48 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    // Aquí puedes agregar la lógica para enviar el formulario
-    // Por ejemplo, usando fetch o axios para enviar a una API
+    setIsLoading(true);
 
-    // Simulación de envío exitoso
-    setFormStatus({
-      submitted: true,
-      error: false,
-      message: '¡Mensaje enviado correctamente! Te contactaré pronto.'
-    });
-    
-    setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
-    });
+    try {
+      const response = await fetch('https://apiportafolio-one.vercel.app//api/email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          nombre: formData.name,
+          email: formData.email,
+          asunto: formData.subject,
+          mensaje: formData.message
+        })        
+      });
+  
+      if (!response.ok) {
+        throw new Error('Error al enviar el formulario');
+      }
+  
+      setFormStatus({
+        submitted: true,
+        error: false,
+        message: '¡Mensaje enviado correctamente! Te contactaré pronto.'
+      });
+  
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+      });
+  
+    } catch (error) {
+      setFormStatus({
+        submitted: true,
+        error: true,
+        message: 'Hubo un error al enviar el mensaje. Intentalo más tarde.'
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -140,7 +165,18 @@ const Contact = () => {
                 ></textarea>
               </div>
               
-              <button type="submit" className="btn btn-primary">Enviar Mensaje</button>
+              <button 
+                type="submit" 
+                className="btn btn-primary" 
+                disabled={isLoading}
+              >
+                {isLoading ? (
+                  <>
+                    Enviando
+                    <span className="loader"></span>
+                  </>
+                ) : 'Enviar Mensaje'}
+              </button>
             </form>
           )}
         </div>

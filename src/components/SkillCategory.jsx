@@ -32,12 +32,12 @@ const SkillCategory = ({ category, skills, images }) => {
         </div>
 
         {/* Reverso */}
-        <div className="flip-card-back">
+        {/* <div className="flip-card-back">
           <div className="skills-list">
             <strong>{category}</strong>
             <img src={images} alt={images} className="skill-image" />
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

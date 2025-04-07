@@ -30,19 +30,20 @@
   perspective: 1000px;
   border-radius: 8px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  margin: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   min-height: 450px;
 }
 
 /* Flip card efecto */
-.flip-card-inner {
+/* .flip-card-inner {
   position: relative;
   width: 100%;
   height: 100%;
   transition: transform 0.8s;
   transform-style: preserve-3d;
 }
-
+*/
 .flip-card-front, .flip-card-back {
   position: absolute;
   width: 100%;
@@ -54,9 +55,9 @@
   background-color: #F9FCFF;
 }
 
-.flip-card-front {
-  transform: rotateY(180deg); /* Girar 180 grados para que esté detrás */
-}
+/* .flip-card-front {
+  transform: rotateY(180deg);
+} */
 
 .flip-card-back {
   background-color: #F9FCFF;
@@ -77,9 +78,9 @@
 }
 
 /* Activar flip al pasar el cursor */
-.skill-category:hover .flip-card-inner {
+/* .skill-category:hover .flip-card-inner {
   transform: rotateY(180deg);
-}
+} */
   
   .skill-category h3 {
     font-size: 1.5rem;

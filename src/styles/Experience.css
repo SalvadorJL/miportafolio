@@ -152,6 +152,14 @@
         margin-left: 10px;
     }
 
+    .timeline-dot {
+      display: none;
+    }
+    
+    .timeline-line {
+      display: none;
+    }
+
     .experience-content:before {
         display: none;
     }
