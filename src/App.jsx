@@ -8,20 +8,31 @@ import Skills from './components/Skills';
 import Experience from './components/Experience';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import { useState } from "react";
+import lenguage from './data/lenguage';
 
 function App() {
+
+  const [isEnglish, setIsEnglish] = useState(true);
+
+  const toggleLanguage = () => {
+    setIsEnglish(!isEnglish);
+  };
+
+  const currentLang = isEnglish ? lenguage.spanish : lenguage.english;
+
   return (
     <>
-      <Navbar />
+      <Navbar toggleLanguage={toggleLanguage} text={currentLang.navbar}/>
       <main>
-        <Hero />
-        <About />
-        <Skills />
-        <Experience />
-        <Projects />
-        <Contact />
+        <Hero text={currentLang.hero}/>
+        <About text={currentLang.about}/>
+        <Skills text={currentLang.skills}/>
+        <Experience text={currentLang.experience}/>
+        <Projects text={currentLang.projects}/>
+        <Contact text={currentLang.contact}/>
       </main>
-      <Footer />
+      <Footer text={currentLang.footer}/>
     </>
   );
 }

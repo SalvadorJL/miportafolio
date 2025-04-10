@@ -4,7 +4,7 @@ import {
   FaLinkedin, FaGithub
 } from 'react-icons/fa';
 
-const Contact = () => {
+const Contact = ({ text }) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -75,8 +75,8 @@ const Contact = () => {
   return (
     <section id="contact" className="contact">
       <div className="section-header">
-        <h2>Contacto</h2>
-        <p>¿Tienes un proyecto en mente? ¡Hablemos!</p>
+        <h2>{text.title}</h2>
+        <p>{text.subtitle}</p>
       </div>
       
       <div className="contact-container">
@@ -84,21 +84,21 @@ const Contact = () => {
           <div className="info-item">
             <i className="fas fa-envelope"></i>
             <div>
-              <h3>Email</h3>
+              <h3>{text.contact[0]}</h3>
               <p>salvador.lopez.970519@gmail.com</p>
             </div>
           </div>
           <div className="info-item">
             <i className="fas fa-envelope"></i>
             <div>
-              <h3>Teléfono</h3>
+              <h3>{text.contact[1]}</h3>
               <p>+52 961-196-7594</p>
             </div>
           </div>
           <div className="info-item">
             <i className="fas fa-map-marker-alt"></i>
             <div>
-              <h3>Ubicación</h3>
+              <h3>{text.contact[2]}</h3>
               <p>Tuxtla Gutierrez, Chiapas</p>
             </div>
           </div>
@@ -128,7 +128,7 @@ const Contact = () => {
                   type="text"
                   id="name"
                   name="name"
-                  placeholder="Tu nombre"
+                  placeholder={text.form.name}
                   value={formData.name}
                   onChange={handleChange}
                   required
@@ -140,7 +140,7 @@ const Contact = () => {
                   type="email"
                   id="email"
                   name="email"
-                  placeholder="Tu email"
+                  placeholder={text.form.email}
                   value={formData.email}
                   onChange={handleChange}
                   required
@@ -152,7 +152,7 @@ const Contact = () => {
                   type="text"
                   id="subject"
                   name="subject"
-                  placeholder="Asunto"
+                  placeholder={text.form.subject}
                   value={formData.subject}
                   onChange={handleChange}
                   required
@@ -163,7 +163,7 @@ const Contact = () => {
                 <textarea
                   id="message"
                   name="message"
-                  placeholder="Tu mensaje"
+                  placeholder={text.form.message}
                   value={formData.message}
                   onChange={handleChange}
                   rows="5"
@@ -178,10 +178,10 @@ const Contact = () => {
               >
                 {isLoading ? (
                   <>
-                    Enviando
+                    {text.form.sending}
                     <span className="loader"></span>
                   </>
-                ) : 'Enviar Mensaje'}
+                ) : text.form.button}
               </button>
             </form>
           )}

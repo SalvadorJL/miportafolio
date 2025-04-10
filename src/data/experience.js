@@ -2,7 +2,7 @@ const experience = [
     {
       id: 1,
       title: "Ingeniero de sistemas",
-      company: "Global Hitss (ALIANZA SALUD INTERACTIVA)",
+      company: "Global Hitss (VRIMConnect)",
       location: "Ciudad de México, México",
       period: "Julio 2023 - October 2024",
       description: "Desarrollo de aplicaciones web para agenda de citas médicas y registro de doctores y consultorios.",

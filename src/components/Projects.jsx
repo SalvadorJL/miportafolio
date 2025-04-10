@@ -33,16 +33,16 @@ const ProjectCard = ({ project }) => {
   );
 };
 
-const Projects = () => {
+const Projects = ({ text }) => {
   return (
     <section id="projects" className="projects">
       <div className="section-header">
-        <h2>Mis Proyectos</h2>
-        <p>Aquí hay algunos proyectos en los que he trabajado recientemente</p>
+        <h2>{text.title}</h2>
+        <p>{text.subtitle}</p>
       </div>
       <div className="projects-grid">
-        {projectsData.map((project, index) => (
-          <ProjectCard key={index} project={project} />
+        {text.projects.map((projects, index) => (
+          <ProjectCard key={index} project={projects} />
         ))}
       </div>
     </section>

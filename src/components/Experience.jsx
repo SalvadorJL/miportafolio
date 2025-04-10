@@ -30,16 +30,16 @@ const ExperienceItem = ({ experience }) => {
   );
 };
 
-const Experience = () => {
+const Experience = ({ text }) => {
   return (
     <section id="experience" className="experience">
       <div className="section-header">
-        <h2>Experiencia</h2>
+        <h2>{text.title}</h2>
         {/* <p>Mi trayectoria profesional</p> */}
       </div>
       
       <div className="experience-container">
-        {experienceData.map((exp) => (
+        {text.experience.map((exp) => (
           <ExperienceItem key={exp.id} experience={exp} />
         ))}
       </div>

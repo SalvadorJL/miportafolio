@@ -5,7 +5,6 @@ const SkillCategory = ({ category, skills, images }) => {
   return (
     <div className="skill-category flip-card">
       <div className="flip-card-inner">
-        {/* Frente */}
         <div className="flip-card-front">
           <h3>{category}</h3>
           <div className="skills-list">
@@ -30,14 +29,6 @@ const SkillCategory = ({ category, skills, images }) => {
             })}
           </div>
         </div>
-
-        {/* Reverso */}
-        {/* <div className="flip-card-back">
-          <div className="skills-list">
-            <strong>{category}</strong>
-            <img src={images} alt={images} className="skill-image" />
-          </div>
-        </div> */}
       </div>
     </div>
   );

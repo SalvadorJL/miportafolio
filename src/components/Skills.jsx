@@ -4,7 +4,7 @@ import '../styles/Skills.css';
 import skillsData, { skillsImages } from '../data/skills';
 import SkillCategory from './SkillCategory';
 
-const Skills = () => {
+const Skills = ({ text }) => {
   const categories = Object.keys(skillsData);
   const carouselRef = useRef(null);
   const scrollAmountRef = useRef(0);
@@ -63,8 +63,8 @@ const Skills = () => {
   return (
     <section id="skills" className="skills">
       <div className="section-header">
-        <h2>Mis Habilidades</h2>
-        <p>Tecnologías y herramientas que domino</p>
+        <h2>{text.title}</h2>
+        <p>{text.subtitle}</p>
       </div>
 
       <div 
